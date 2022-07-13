@@ -30,7 +30,20 @@ export default function Card() {
 
   return (
     <>
-      <div>{cardcontent}</div>
+      <div className="card-holder">
+        {cardcontent}
+        {cardcontent}
+        {cardcontent}
+        {cardcontent}
+        {cardcontent}
+        {cardcontent}
+        {cardcontent}
+        {cardcontent}
+        {cardcontent}
+        {cardcontent}
+        {cardcontent}
+        {cardcontent}
+      </div>
     </>
   );
 }

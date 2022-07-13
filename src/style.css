@@ -57,6 +57,7 @@ header nav {
   background: var(--primary);
   color: var(--font2);
   transition: all 1.7s ease;
+  z-index: 2;
 }
 
 header nav.show {
@@ -77,59 +78,77 @@ header nav ul li:hover {
   background: var(--secondary);
 }
 
+header nav ul li:nth-child(2) {
+  margin-left: 60px;
+}
+
+header nav ul li:nth-child(3) {
+  margin-left: 90px;
+}
+
+header nav ul li:nth-child(4) {
+  margin-left: 180px;
+}
+
 header .fa {
   font-size: 20px;
   padding: 4px;
   border: 2px solid var(--font2);
   border-radius: 3px;
 }
+
 /* frontpage */
-
-/* developer */
-.developer {
+.frontpage {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
-.aboutme-image {
-  display: flex;
-  flex-direction: column;
-}
-
-.aboutme-image img {
+.frontpage-image {
   max-width: 100%;
-  height: 70vh;
-  margin: auto;
-  border-radius: 5px;
+  height: 50vh;
 }
 
-.about-me {
-  display: flex;
-  flex-direction: column;
-}
-
-.about-me .about-developer {
+.frontpage-words {
   text-align: center;
-  padding: 20px;
-}
-
-.about-me .hire-me-text {
+  background: rgba(0, 0, 0, 0.5);
+  width: max-content;
+  padding: 10px;
+  position: absolute;
   margin: auto;
-  text-decoration: none;
-  color: var(--font1);
-  font-size: 20px;
+  color: #fefefe;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.about-me .hire-me-text:hover {
-  transform: scaleX(1.5);
+.frontpage .search {
+  background: var(--secondary);
+  border: none;
+  width: 180px;
+  height: 30px;
+  border-radius: 20px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding-left: 8px;
+  outline: none;
+  color: #fefefe;
 }
 
-.developer .about-app {
-  text-align: center;
-  margin: 15px;
+.frontpage .search::placeholder {
+  color: #ddd;
+  letter-spacing: 2px;
 }
 
 /* card style */
+.card-holder {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px;
+}
+
 .card-container {
   position: relative;
   display: flex;
@@ -137,19 +156,15 @@ header .fa {
   width: 180px;
   height: 220px;
   overflow: hidden;
+  margin: auto;
 }
 .card {
   height: 220px;
   width: 170px;
   background: var(--secondary);
-  box-shadow: lightgrey 5px 5px 4px;
   border-radius: 5px;
   margin: 5px;
   cursor: pointer;
-}
-
-.card:hover {
-  box-shadow: lightgrey -7px -4px 3px, grey 7px 5px 5px;
 }
 
 .card img {
@@ -216,4 +231,48 @@ header .fa {
 .review button:hover {
   background: var(--font2);
   color: var(--secondary);
+}
+
+/* developer */
+.developer {
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutme-image {
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutme-image img {
+  max-width: 100%;
+  height: 70vh;
+  margin: auto;
+  border-radius: 5px;
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-me .about-developer {
+  text-align: center;
+  padding: 20px;
+}
+
+.about-me .hire-me-text {
+  margin: auto;
+  text-decoration: none;
+  color: var(--font1);
+  font-size: 20px;
+}
+
+.about-me .hire-me-text:hover {
+  transform: scaleX(1.5);
+}
+
+.developer .about-app {
+  text-align: center;
+  margin: 15px;
 }

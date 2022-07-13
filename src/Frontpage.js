@@ -25,20 +25,12 @@ export default function Header() {
   }, []);
   return (
     <div>
-      <div className="header">
-        <img src={headpix} alt="" />
-        <div className="header-words">
-          <span onClick={changeIt}>
-            FLEXZ; I don't even know what to say about this amazing react app.
-            The world is fiiled with people carrying headaches around, being
-            depressed is just a global pandemic that scientists couldn't find
-            the cure for. In a world so sad and lonely, we all find solace in
-            entertainment. Flexz is an application that you can use to know more
-            about your favorite movie or music, an application that helps lessen
-            and take away that moment of loneliness. FLEXZ-MOVIES or
-            FLEXZ-MUSIC, enjoy
-          </span>
+      <div className="frontpage">
+        <img src={headpix} alt="" className="frontpage-image" />
+        <div className="frontpage-words">
+          <span>Flexz-movies; get a thriller from the trailer.</span>
         </div>
+        <input type="text" className="search" placeholder="...search" />
       </div>
     </div>
   );

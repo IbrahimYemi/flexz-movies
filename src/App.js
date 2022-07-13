@@ -11,9 +11,9 @@ export default function App() {
   return (
     <>
       <Header />
-      {/* <Frontpage />
+      <Frontpage />
       <Card />
-      <Developer /> */}
+      <Developer />
     </>
   );
 }
