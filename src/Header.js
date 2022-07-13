@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <header>
       <h1>Flexz-Movies</h1>
-      <nav>
+      <nav className={bar ? 'show' : 'none'}>
         <ul>
           <li>Home</li>
           <li>Movies</li>
