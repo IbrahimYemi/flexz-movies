@@ -10,10 +10,10 @@ import Footers from './Footers';
 export default function App() {
   return (
     <>
-      {/* <Header />
-      <Frontpage />
-      <Card /> */}
-      <Developer />
+      <Header />
+      {/* <Frontpage />
+      <Card />
+      <Developer /> */}
     </>
   );
 }

@@ -12,6 +12,7 @@ export default function Header() {
           <li>About</li>
         </ul>
       </nav>
+      <i className="fa fa-bars"></i>
     </header>
   );
 }
