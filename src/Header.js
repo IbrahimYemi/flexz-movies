@@ -1,6 +1,11 @@
 import React from 'react';
+import { useState } from 'react';
 
 export default function Header() {
+  const [bar, setBar] = useState(false);
+  function handleClick() {
+    setBar((prevBar) => !prevBar);
+  }
   return (
     <header>
       <h1>Flexz-Movies</h1>
@@ -12,7 +17,10 @@ export default function Header() {
           <li>About</li>
         </ul>
       </nav>
-      <i className="fa fa-bars"></i>
+      <i
+        className={!bar ? 'fa fa-bars' : 'fa fa-times'}
+        onClick={handleClick}
+      ></i>
     </header>
   );
 }
