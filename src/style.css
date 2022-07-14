@@ -268,8 +268,8 @@ header .fa {
 }
 
 .modal img {
-  height: 45vh;
-  width: 400px;
+  height: 40vh;
+  width: 300px;
 }
 
 .modal h3 {
@@ -294,6 +294,7 @@ header .fa {
   justify-content: left;
   text-align: justify;
   display: flex;
+  margin-bottom: 10px;
 }
 /* modal end*/
 

@@ -48,11 +48,13 @@ export default function Movies() {
           <div className="modal" onHide={handleClose}>
             <img src={IMG_URL + item.poster_path} alt={item.title} />
             <h3>{item.title}</h3>
-            {/* <h4>Rating: {item.vote_average}<h4/> */}
-            <h5>Release Date: {item.release_date}</h5>
-            <br></br>
-            <h6>Overview</h6>
-            <p>{item.overview}</p>
+            <h4>
+              Rating: {item.vote_average}
+              <h5>Release Date: {item.release_date}</h5>
+              <br></br>
+              <h5>Overview</h5>
+              <p>{item.overview}</p>{' '}
+            </h4>
             <button onClick={handleClose}>CLOSE</button>
           </div>
         )}
