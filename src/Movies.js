@@ -63,9 +63,3 @@ export default function Movies() {
   });
   return <div className="card-holder">{cards}</div>;
 }
-
-// export default function Movies(title, poster_path, vote_average, release_date) {
-//   const IMG_URL = 'https://image.tmdb.org/t/p/w500';
-
-//   );
-// }
