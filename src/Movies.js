@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Modal, show, Button } from 'react-bootstrap';
 
 export default function Movies() {
   const [movieData, setMovieData] = React.useState([]);
@@ -16,6 +17,10 @@ export default function Movies() {
       .then((data) => setMovieData(data.results));
   }, []);
 
+  const [show, setShow] = useState(false);
+  const handleShow = () => setShow(true);
+  const handleClose = () => setShow(false);
+
   const movie = ['1', '2', '3'];
   const cards = movieData.map((item) => {
     return (
@@ -29,8 +34,25 @@ export default function Movies() {
         </div>
         <div className="release">{item.release_date}</div>
         <div className="review">
-          <button>Trailer</button>
+          <button onClick={handleShow}>Trailer</button>
         </div>
+        <Modal show={show} onHide={handleClose}>
+                      <Modal.Header closeButton>
+                        <Modal.Title></Modal.Title>
+                      </Modal.Header>
+                      <Modal.Body>
+                      <img className="card-img-top" style={{width:'14rem'}}src={IMG_URL + item.poster_path} />
+                      <h3>{item.title}</h3>
+                      <h4>IMDb: {item.vote_average}</h4>
+                      <h5>Release Date: {item.release_date}</h5>
+                      <br></br>
+                      <h6>Overview</h6>
+                      <p>{item.overview}</p>
+                      </Modal.Body>
+                      <Modal.Footer>
+                          <Button variant="secondary" onClick={handleClose}>Close</Button>
+                      </Modal.Footer>
+                  </Modal>
       </div>
     );
   });
