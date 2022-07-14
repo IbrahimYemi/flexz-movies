@@ -153,16 +153,16 @@ header .fa {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 250px;
-  height: 320px;
+  width: 220px;
+  height: 280px;
   overflow: hidden;
   margin: auto;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 .card {
-  height: 320px;
-  width: 250px;
+  height: 280px;
+  width: 220px;
   background: var(--secondary);
   border-radius: 5px;
   margin: 5px;
