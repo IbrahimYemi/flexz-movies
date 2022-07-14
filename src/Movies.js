@@ -39,10 +39,10 @@ export default function Movies() {
               {item.vote_average}
             </span>
           </div>
-        </div>
-        <div className="release">{item.release_date}</div>
-        <div className="review">
-          <button onClick={handleShow}>See More</button>
+          <div className="release">{item.release_date}</div>
+          <div className="review">
+            <button onClick={handleShow}>See More</button>
+          </div>
         </div>
         {show && (
           <div className="modal" onHide={handleClose}>

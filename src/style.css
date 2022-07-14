@@ -154,7 +154,7 @@ header .fa {
   display: flex;
   flex-direction: column;
   width: 220px;
-  height: 280px;
+  height: auto;
   overflow: hidden;
   margin: auto;
   border-bottom-left-radius: 5px;
@@ -167,6 +167,7 @@ header .fa {
   border-radius: 5px;
   margin: 5px;
   cursor: pointer;
+  position: relative;
 }
 
 .card img {
@@ -206,7 +207,7 @@ header .fa {
   padding: 10px;
   background: var(--primary);
   position: absolute;
-  left: 5px;
+  left: 0px;
   right: 0px;
   bottom: 0px;
   max-height: 100%;
@@ -253,8 +254,8 @@ header .fa {
 .modal {
   height: 90%;
   width: 90%;
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  position: fixed;
+  z-index: 0;
   left: 0;
   top: 0;
   color: var(--font1);
