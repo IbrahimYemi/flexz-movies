@@ -1,4 +1,5 @@
 import React from 'react';
+import Card from './Card';
 
 export default function Movies(title, poster_path, vote_average, release_date) {
   const IMG_URL = 'https://image.tmdb.org/t/p/w500';
