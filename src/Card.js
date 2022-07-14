@@ -13,7 +13,7 @@ export default function Card() {
   React.useEffect(function () {
     fetch(API_URL)
       .then((res) => res.json())
-      .then((data) => setMovieData(data.results[0]));
+      .then((data) => setMovieData(data.results));
   }, []);
   console.log(movieData)
   // const cardcontent = (
