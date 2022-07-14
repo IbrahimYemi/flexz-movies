@@ -22,7 +22,7 @@ export default function Movies() {
   const handleClose = () => setShow(false);
 
   const movie = ['1', '2', '3'];
-  const cards = movieData.map((item) => {
+  const cards = movieData.forEach((item) => {
     const mystyle1 = {
       color: 'red',
     };
@@ -45,7 +45,7 @@ export default function Movies() {
         <div className="review">
           <button onClick={handleShow}>Trailer</button>
         </div>
-        <Modal show={show} onHide={handleClose}>
+        <Modal key={item.id} show={show} onHide={handleClose}>
           <Modal.Header closeButton>
             <Modal.Title></Modal.Title>
           </Modal.Header>
