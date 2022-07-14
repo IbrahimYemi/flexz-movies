@@ -1,4 +1,5 @@
 import React from 'react';
+import Movies from './Movies';
 
 export default function Card() {
   const [movieData, setMovieData] = React.useState([]);
@@ -14,13 +15,14 @@ export default function Card() {
       .then((res) => res.json())
       .then((data) => setMovieData(data.results));
   }, []);
-  console.log(movieData)
+  console.log(movieData);
   return (
     <>
       <div className="card-holder">
-        {movieData.lenght > 0 && movieData.map(movies=>{
-          <Movies key={movies.id} data={movies}/>
-        })}
+        {movieData.lenght > 0 &&
+          movieData.map((movies) => {
+            <Movies key={movies.id} data={movies} />;
+          })}
       </div>
     </>
   );
