@@ -14,7 +14,6 @@ export default function Movies() {
       .then((res) => res.json())
       .then((data) => setMovieData(data.results));
   }, []);
-  console.log(movieData);
 
   const movie = ['1', '2', '3'];
   const cards = movieData.map((item) => {
@@ -32,16 +31,13 @@ export default function Movies() {
           <button>Trailer</button>
         </div>
       </div>
-    )
+    );
   });
-  return(
-    <div>{cards}</div>
-  )
-};
-
+  return <div>{cards}</div>;
+}
 
 // export default function Movies(title, poster_path, vote_average, release_date) {
 //   const IMG_URL = 'https://image.tmdb.org/t/p/w500';
- 
+
 //   );
 // }
