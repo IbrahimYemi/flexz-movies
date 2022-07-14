@@ -37,22 +37,29 @@ export default function Movies() {
           <button onClick={handleShow}>Trailer</button>
         </div>
         <Modal show={show} onHide={handleClose}>
-                      <Modal.Header closeButton>
-                        <Modal.Title></Modal.Title>
-                      </Modal.Header>
-                      <Modal.Body>
-                      <img className="card-img-top" style={{width:'14rem'}}src={IMG_URL + item.poster_path} />
-                      <h3>{item.title}</h3>
-                      <h4>IMDb: {item.vote_average}</h4>
-                      <h5>Release Date: {item.release_date}</h5>
-                      <br></br>
-                      <h6>Overview</h6>
-                      <p>{item.overview}</p>
-                      </Modal.Body>
-                      <Modal.Footer>
-                          <Button variant="secondary" onClick={handleClose}>Close</Button>
-                      </Modal.Footer>
-                  </Modal>
+          <Modal.Header closeButton>
+            <Modal.Title></Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <img
+              className="card-img-top"
+              onClick={handleClose}
+              style={{ width: '14rem' }}
+              src={IMG_URL + item.poster_path}
+            />
+            <h3>{item.title}</h3>
+            <h4>IMDb: {item.vote_average}</h4>
+            <h5>Release Date: {item.release_date}</h5>
+            <br></br>
+            <h6>Overview</h6>
+            <p>{item.overview}</p>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
       </div>
     );
   });
