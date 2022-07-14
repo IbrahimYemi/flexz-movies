@@ -14,8 +14,7 @@ export default function Card() {
     fetch(API_URL)
       .then((res) => res.json())
       .then((data) => setMovieData(data));
-  },[]);
-  console.log(movieData);
+  }, []);
 
   const cardcontent = (
     <div className="card-container">
