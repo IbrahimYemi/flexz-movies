@@ -23,15 +23,20 @@ export default function Movies() {
 
   const movie = ['1', '2', '3'];
   const cards = movieData.map((item) => {
-    const red = 'red';
-    const orange = 'orange';
+    const mystyle1 = {
+      color: 'red',
+    };
+    const mystyle2 = {
+      color: 'orange',
+    };
+    const mystyle = item.vote_average < 7 ? mystyle1 : mystyle2;
     return (
       <div key={item.id} className="card-container">
         <div className="card">
           <img src={IMG_URL + item.poster_path} alt={item.title} />
           <div className="title-rating">
             <h3 className="title">{item.title}</h3>
-            <span className="rating">
+            <span className="rating" style={mystyle}>
               {item.vote_average}
             </span>
           </div>

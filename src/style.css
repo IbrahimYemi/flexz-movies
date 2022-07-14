@@ -180,7 +180,9 @@ header .fa {
   display: flex;
   flex-direction: column;
   padding: 0 10px;
+  font-family: 'Arial';
   align-items: left;
+  height: auto;
 }
 
 .title {
@@ -195,6 +197,7 @@ header .fa {
   border-radius: 4px;
   font-weight: 600;
   width: max-content;
+  margin: 5px;
 }
 
 .review {
