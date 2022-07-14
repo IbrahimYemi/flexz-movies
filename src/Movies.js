@@ -42,9 +42,9 @@ export default function Movies() {
         </div>
         <div className="release">{item.release_date}</div>
         <div className="review">
-          <button onClick={handleShow}>Trailer</button>
+          <button onClick={handleShow}>Show More</button>
         </div>
-        <Modal key={item.id} show={show} onHide={handleClose}>
+        <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
             <Modal.Title></Modal.Title>
           </Modal.Header>
