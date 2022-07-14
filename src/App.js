@@ -6,6 +6,7 @@ import Card from './Card';
 import Developer from './Developer';
 import Review from './Review';
 import Footers from './Footers';
+import Test from './Test';
 
 export default function App() {
   return (
@@ -13,7 +14,6 @@ export default function App() {
       {/* <Header />
       <Frontpage /> */}
       <Card />
-
     </>
   );
 }

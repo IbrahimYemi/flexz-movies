@@ -249,7 +249,7 @@ header .fa {
   color: var(--secondary);
 }
 
-/* modal display */
+/* modal display normal*/
 .modal {
   height: 90%;
   width: 90%;
@@ -259,7 +259,7 @@ header .fa {
   top: 0;
   color: var(--font1);
   background-color: var(--font2); /* Black fallback color */
- 
+
   overflow-x: hidden; /* Disable horizontal scroll */
   transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
   padding: 15px;
@@ -288,6 +288,8 @@ header .fa {
   cursor: pointer;
   margin: auto;
 }
+
+/* modal second */
 
 /* developer */
 .developer {

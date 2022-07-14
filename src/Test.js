@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Modal, show, Button } from 'react-bootstrap';
 
-export default function Movies() {
+export default function Test() {
   const [movieData, setMovieData] = React.useState([]);
 
   const API_KEY = 'api_key=282292c1d01116b3d3ccf1c8c40cf303';
@@ -30,32 +30,20 @@ export default function Movies() {
     };
     const mystyle = item.vote_average < 7 ? mystyle1 : mystyle2;
     return (
-      <div key={item.id} className="card-container">
-        <div className="card">
+      <div key={item.id} className="card-containe">
+        <div className="carfd">
           <img src={IMG_URL + item.poster_path} alt={item.title} />
-          <div className="title-rating">
-            <h3 className="title">{item.title}</h3>
-            <span className="rating" style={mystyle}>
+          <div className="titlef-rating">
+            <h3 className="titlde">{item.title}</h3>
+            <span className="ratding" style={mystyle}>
               {item.vote_average}
             </span>
           </div>
         </div>
-        <div className="release">{item.release_date}</div>
-        <div className="review">
+        <div className="releasse">{item.release_date}</div>
+        <div className="revieszw">
           <button onClick={handleShow}>See More</button>
         </div>
-        {show && (
-          <div className="modal" onHide={handleClose}>
-            <img src={IMG_URL + item.poster_path} alt={item.title} />
-            <h3>{item.title}</h3>
-            {/* <h4>Rating: {item.vote_average}<h4/> */}
-            <h5>Release Date: {item.release_date}</h5>
-            <br></br>
-            <h6>Overview</h6>
-            <p>{item.overview}</p>
-            <button onClick={handleClose}>CLOSE</button>
-          </div>
-        )}
       </div>
     );
   });
