@@ -22,7 +22,7 @@ export default function Movies() {
   const handleClose = () => setShow(false);
 
   const movie = ['1', '2', '3'];
-  const cards = movieData.forEach((item) => {
+  const cards = movieData.map((item) => {
     const mystyle1 = {
       color: 'red',
     };
