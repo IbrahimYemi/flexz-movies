@@ -44,9 +44,9 @@ export default function Movies() {
         <div className="review">
           <button onClick={handleShow}>See More</button>
         </div>
-        <div className="modal">
-          <h1>{item.title}</h1>
+        <div className="modal" onHide={handleClose}>
           <img src={IMG_URL + item.poster_path} alt={item.title} />
+          <h3>{item.title}</h3>
           <h4>Rating: {item.vote_average}<h4/>
             <h5>Release Date: {item.release_date}</h5>
             <br></br>
