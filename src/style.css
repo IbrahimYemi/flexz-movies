@@ -289,7 +289,13 @@ header .fa {
   margin: auto;
 }
 
-/* modal second */
+.modal p {
+  font-size: 14px;
+  justify-content: left;
+  text-align: justify;
+  display: flex;
+}
+/* modal end*/
 
 /* developer */
 .developer {
