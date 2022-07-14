@@ -215,6 +215,16 @@ header .fa {
   transition: transform 0.3s ease-in;
 }
 
+.release {
+  position: absolute;
+  color: #fefefe;
+  background: rgba(0, 0, 0, 0.5);
+  top: 10px;
+  left: 10px;
+  padding: 4px 7px;
+  border-radius: 5px;
+}
+
 .card-container:hover .review {
   transform: translateY(0%);
 }
