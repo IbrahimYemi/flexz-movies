@@ -1,5 +1,4 @@
 import React from 'react';
-import Movies from './Movies';
 
 export default function Card() {
   const [movieData, setMovieData] = React.useState([]);
