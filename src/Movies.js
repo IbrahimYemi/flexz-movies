@@ -53,7 +53,7 @@ export default function Movies() {
             <h6>Overview</h6>
             <p>{item.overview}</p>
             <button>CLOSE</button>
-        </div>
+        {/* </div>
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
             <Modal.Title></Modal.Title>
@@ -77,7 +77,7 @@ export default function Movies() {
               Close
             </Button>
           </Modal.Footer>
-        </Modal>
+        </Modal> */}
       </div>
     );
   });
