@@ -54,6 +54,7 @@ header nav {
   top: 50px;
   right: 0;
   left: 0;
+  height: 250px;
   background: var(--primary);
   color: var(--font2);
   transition: all 1.7s ease;
@@ -146,14 +147,14 @@ header .fa {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 10px;
+  padding: 5px;
 }
 
 .card-container {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 220px;
+  width: 200px;
   height: auto;
   overflow: hidden;
   margin: auto;
@@ -162,7 +163,7 @@ header .fa {
 }
 .card {
   height: 280px;
-  width: 220px;
+  width: 200px;
   background: var(--secondary);
   border-radius: 5px;
   margin: 5px;

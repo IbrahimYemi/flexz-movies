@@ -11,9 +11,10 @@ import Test from './Test';
 export default function App() {
   return (
     <>
-      {/* <Header />
-      <Frontpage /> */}
+      <Header />
+      <Frontpage />
       <Card />
+      <Developer/>
     </>
   );
 }
