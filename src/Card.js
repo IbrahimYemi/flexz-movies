@@ -11,11 +11,11 @@ export default function Card() {
   const searchURL = BASE_URL + '/search/movie?' + API_KEY;
 
   React.useEffect(function () {
-    console.log('Effect ran');
     fetch(API_URL)
       .then((res) => res.json())
-      .then((data) => console.log(data));
-  });
+      .then((data) => setMovieData(data));
+  },[]);
+  console.log(movieData);
 
   const cardcontent = (
     <div className="card-container">
