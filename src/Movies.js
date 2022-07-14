@@ -18,9 +18,8 @@ export default function Movies() {
 
   const movie = ['1', '2', '3'];
   const cards = movieData.map((item) => {
-    console.log(item.poster_path);
     return (
-      <div className="card-container">
+      <div key={item.id} className="card-container">
         <div className="card">
           <img src={IMG_URL + item.poster_path} alt={item.title} />
           <div className="title-rating">

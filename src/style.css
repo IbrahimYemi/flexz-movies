@@ -153,14 +153,16 @@ header .fa {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 180px;
-  height: 220px;
+  width: 250px;
+  height: 320px;
   overflow: hidden;
   margin: auto;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 .card {
-  height: 220px;
-  width: 170px;
+  height: 320px;
+  width: 250px;
   background: var(--secondary);
   border-radius: 5px;
   margin: 5px;
@@ -176,13 +178,13 @@ header .fa {
 
 .title-rating {
   display: flex;
-  justify-content: space-between;
-  padding: 5px;
-  align-items: center;
+  flex-direction: column;
+  padding: 0 10px;
+  align-items: left;
 }
 
 .title {
-  font-size: 20px;
+  font-size: 16px;
   text-transform: capitalize;
   color: var(--font1);
 }
@@ -192,17 +194,18 @@ header .fa {
   padding: 2px 8px;
   border-radius: 4px;
   font-weight: 600;
+  width: max-content;
 }
 
 .review {
   color: var(--font1);
   text-align: left;
-  padding: 5px;
+  padding: 10px;
   background: var(--primary);
   position: absolute;
   left: 5px;
-  right: 5px;
-  bottom: 5px;
+  right: 0px;
+  bottom: 0px;
   max-height: 100%;
   max-width: 100%;
   transform: translateY(120%);
