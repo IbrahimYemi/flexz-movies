@@ -1,3 +1,3 @@
-# react-vl3kgf
+# Flexz-Movies
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/react-vl3kgf)
