@@ -18,7 +18,11 @@ export default function Movies() {
   }, []);
 
   const [show, setShow] = useState(false);
-  const handleShow = () => setShow(true);
+  const [activeItem, setActiveItem] = useState({});
+  const handleShow = (item) => {
+    setActiveItem(item);
+    setShow(true);
+  };
   const handleClose = () => setShow(false);
 
   const cards = movieData.map((item) => {
@@ -41,19 +45,19 @@ export default function Movies() {
           </div>
           <div className="release">{item.release_date}</div>
           <div className="review">
-            <button onClick={handleShow}>See More</button>
+            <button onClick={() => handleShow(item)}>See More</button>
           </div>
         </div>
         {show && (
           <div className="modal" onHide={handleClose}>
-            <img src={IMG_URL + item.poster_path} alt={item.title} />
-            <h3>{item.title}</h3>
+            <img src={IMG_URL + activeItem.poster_path} alt={activeItem.title} />
+            <h3>{activeItem.title}</h3>
             <h4>
-              Rating: {item.vote_average}
-              <h5>Release Date: {item.release_date}</h5>
+              Rating: {activeItem.vote_average}
+              <h5>Release Date: {activeItem.release_date}</h5>
               <br></br>
               <h5>Overview</h5>
-              <p>{item.overview}</p>{' '}
+              <p>{activeItem.overview}</p>{' '}
             </h4>
             <button onClick={handleClose}>CLOSE</button>
           </div>
